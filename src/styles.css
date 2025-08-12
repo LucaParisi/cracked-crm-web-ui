@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+
+/*@layer components {*/
+/*  .login-credentials-panel {*/
+/*    @apply*/
+/*    bg-blue-300*/
+/*    opacity-75*/
+/*    rounded-3xl*/
+/*    shadow*/
+/*    border*/
+/*    border-slate-200*/
+/*    my-auto*/
+/*    flex*/
+/*    flex-col*/
+/*    align-middle*/
+/*    p-7*/
+/*    space-y-3*/
+/*  }*/
+/*}*/
