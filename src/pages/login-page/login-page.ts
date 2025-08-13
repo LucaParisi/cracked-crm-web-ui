@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 import {Auth} from '@apis';
 import {AccessToken} from '@interfaces';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -32,5 +33,11 @@ export class LoginPage {
   //       }
   //     })
   // }
+
+  constructor(private router: Router) {}
+
+  redirect() {
+    this.router.navigate(['**']);
+  }
 
 }
