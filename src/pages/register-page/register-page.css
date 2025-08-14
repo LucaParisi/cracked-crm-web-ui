@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer components {
+
+  .subscription-card {
+    @apply
+    flex
+    flex-col
+    justify-items-center
+    rounded-2xl
+    bg-blue-600
+    w-50
+    h-60
+    shadow-xl
+  }
+
+  .subscription-card-title {
+    @apply
+    mt-3
+    mb-3
+    text-center
+    font-semibold
+    text-white
+    text-xl
+    text-shadow-xs
+  }
+
+  .subscription-card-text {
+    @apply
+    ml-4
+    mr-4
+    text-lg
+    text-shadow-xs
+  }
+
+  .subscription-card-ul {
+    @apply
+    list-disc
+    mt-2
+    ml-9
+    mr-auto
+    text-shadow-xs
+  }
+
+
+}

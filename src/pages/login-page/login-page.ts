@@ -1,18 +1,31 @@
-import { Component } from '@angular/core';
-import {NgOptimizedImage} from "@angular/common";
+import {Component} from '@angular/core';
+import {NgIf, NgOptimizedImage} from "@angular/common";
 import {Auth} from '@apis';
 import {AccessToken} from '@interfaces';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
-    imports: [
-        NgOptimizedImage
-    ],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './login-page.html',
   styleUrl: './login-page.css'
 })
 export class LoginPage {
+
+  isPasswordVisible = false;
+
+  showOrHidePassword(input: HTMLInputElement) {
+    if (input.type === 'password') {
+      input.type = 'text';
+      this.isPasswordVisible = true;
+    } else {
+      input.type = 'password';
+      this.isPasswordVisible = false;
+    }
+  }
+
   // constructor(private readonly authService: Auth) {}
   //
   // username: string | null = null;
@@ -36,8 +49,8 @@ export class LoginPage {
 
   constructor(private router: Router) {}
 
-  redirect() {
-    this.router.navigate(['**']);
+  navigateToRegisterPage(): void {
+    this.router.navigate(['register']);
   }
 
 }
