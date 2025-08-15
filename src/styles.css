@@ -16,11 +16,8 @@
 
   .login-credentials-favicon {
     @apply
-    h-[850px]
-    w-[850px]
-    max-w-[90vw]
-    max-h-[90vh]
-    object-contain
+    /*h-[45vmax]*/
+    w-[45vmax]
   }
 
   .login-credentials-panel {
@@ -31,14 +28,12 @@
     shadow
     border
     border-slate-200
-    my-auto
     flex
     flex-col
-    align-middle
     p-7
     space-y-3
-    h-2/3
-    mt-10
+    w-[45vmax]
+    h-[45vmax]
   }
 
   .login-credentials-input-container {
