@@ -1,20 +1,20 @@
-<div class="size-screen flex flex-row justify-content-center align-items-center gap-7 p-7">
+<div class="size-screen flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10 p-3 md:p7">
 
   <img ngSrc="favicon.png" class="login-credentials-favicon" height="850" width="850"
        draggable="false" alt="cracken-crm-logo"/>
 
-  <div class="w-full">
-
     <div class="login-credentials-panel">
 
-      <span class="font-bold text-2xl">Welcome to Cracken - CRM</span>
+      <span class="font-bold text-lg md:text-2xl">Welcome to Cracken - CRM</span>
 
-      <div class="login-credentials-input-container">
+      <form (ngSubmit)="login()">
 
-        <input class="login-credentials-field" type="email" placeholder="Email"/>
+      <div class="form-credentials-input-container">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"
-             class="login-credentials-field-icon">
+        <input class="form-credentials-field" type="email" placeholder="Email" name="username" [(ngModel)]="username" />
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+             class="login-form-credentials-field-icon">
           <path
             d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"/>
           <path
@@ -22,25 +22,60 @@
         </svg>
       </div>
 
-      <div class="login-credentials-input-container">
+      <div class="form-credentials-input-container">
 
-        <input class="login-credentials-field" type="password" placeholder="Password"/>
+        <input class="form-credentials-field" type="password" placeholder="Password" name="password" [(ngModel)]="password" #passwordField  />
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor"
-             class="login-credentials-field-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+             class="login-form-credentials-field-icon">
           <path
             d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"/>
         </svg>
 
+        @if (!isPasswordVisible) {
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+               class="form-credentials-field-show-or-hide-password-icon" (click)="showOrHidePassword(passwordField)">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+            <path fill-rule="evenodd" d="M1.38 8.28a.87.87 0 0 1 0-.566 7.003 7.003 0 0 1 13.238.006.87.87 0 0 1 0 .566A7.003 7.003 0 0 1 1.379 8.28ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" clip-rule="evenodd" />
+          </svg>
+        } @else {
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+               class="form-credentials-field-show-or-hide-password-icon" (click)="showOrHidePassword(passwordField)">
+            <path fill-rule="evenodd" d="M3.28 2.22a.75.75 0 0 0-1.06 1.06l10.5 10.5a.75.75 0 1 0 1.06-1.06l-1.322-1.323a7.012 7.012 0 0 0 2.16-3.11.87.87 0 0 0 0-.567A7.003 7.003 0 0 0 4.82 3.76l-1.54-1.54Zm3.196 3.195 1.135 1.136A1.502 1.502 0 0 1 9.45 8.389l1.136 1.135a3 3 0 0 0-4.109-4.109Z" clip-rule="evenodd" />
+            <path d="m7.812 10.994 1.816 1.816A7.003 7.003 0 0 1 1.38 8.28a.87.87 0 0 1 0-.566 6.985 6.985 0 0 1 1.113-2.039l2.513 2.513a3 3 0 0 0 2.806 2.806Z" />
+          </svg>
+        }
+
       </div>
 
-      <div class="mt-6 flex items-center justify-end">
+      <div class="flex items-center justify-end pr-2 pt-1.5 md:pt-2">
+        <input class="hover:cursor-pointer" type="checkbox" id="remember" />
+        <label class="text-xs md:text-base ml-1 hover:cursor-pointer" for="remember">Remember me</label>
+      </div>
+
+      <div class="mt-2 lg:mt-6 flex items-center justify-end">
+
+        <button
+          class="register-button"
+          (click)="navigateToRegisterPage()"
+        >
+          Register
+        </button>
+
         <button type="submit"
-                class="login-credentials-submit-button">
+                class="login-credentials-submit-button"
+        >
           Login
         </button>
+
+      </div>
+
+      </form>
+
+      <div class="flex justify-center lg:border-t-2 border-t-blue-400 border-solid h-full">
+        <a class="pt-10 md:pt-6 lg:pt-6 md:mb-1 lg:mb-0 text-sm md:text-base lg:text-lg" href="/">Forgot your password?</a>
       </div>
     </div>
 
   </div>
-</div>
+<app-footer-component />
