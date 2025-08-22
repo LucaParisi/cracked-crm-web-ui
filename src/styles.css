@@ -3,145 +3,169 @@
 
 
 @layer components {
-  /*.login-credentials-screen {*/
-  /*  @apply*/
-  /*  size-screen*/
-  /*  flex*/
-  /*  flex-row*/
-  /*  justify-content-center*/
-  /*  align-items-center*/
-  /*  gap-7*/
-  /*  p-7*/
-  /*}*/
+
+  /*### Log In Screen Styles ###*/
 
   .login-credentials-favicon {
-    @apply
-    /*h-[45vmax]*/
-    w-[45vmax]
+    @apply w-[45vmax];
   }
 
   .login-credentials-panel {
-    @apply
-    bg-blue-300
-    opacity-75
-    rounded-4xl
-    shadow
-    border
-    border-slate-200
-    flex
-    flex-col
-    p-7
-    space-y-1
-      md:space-y-3
-    w-full
-    max-w-[45vmax]
-    h-fit
-    max-h-[45vmax]
+    @apply bg-blue-300 opacity-75 rounded-4xl shadow border border-slate-200 flex flex-col p-7 space-y-1 md:space-y-3 w-full max-w-[45vmax] h-fit max-h-[45vmax];
   }
 
   .login-credentials-panel > * {
-    @apply
-    min-h-0
+    @apply min-h-0;
   }
 
   .form-credentials-input-container {
-    @apply
-    relative
-    pt-2
-    mt-4
+    @apply relative pt-2 mt-4;
   }
 
   .form-credentials-field {
-    @apply
-    bg-white
-    rounded-xl
-    shadow
-    border
-    w-full
-      px-9
-      py-1
-      text-xs
-    md:px-10
-    md:py-1.5
-    md:text-lg
-    sm:px-9
-    sm:py-1
-    sm:text-sm
-
+    @apply bg-white rounded-xl shadow border w-full px-9 py-1 text-xs md:px-10 md:py-1.5 md:text-lg sm:px-9 sm:py-1 sm:text-sm;
   }
 
   .login-form-credentials-field-icon {
-    @apply
-    absolute
-    left-3
-    top-4.5
-      md:top-1/2
-    transform
-    -translate-y-1/3
-    w-3.5
-    h-3.5
-      md:w-4
-      md:h-4
-    text-shadow-gray-700
-    pointer-events-none
+    @apply absolute left-3 top-4.5 md:top-1/2 transform -translate-y-1/3 w-3.5 h-3.5 md:w-4 md:h-4 text-shadow-gray-700 pointer-events-none;
   }
 
   .form-credentials-field-show-or-hide-password-icon {
-    @apply
-    absolute
-    right-3
-    top-1/2
-    transform
-    -translate-y-1/3
-    w-4
-    h-4
-    text-shadow-gray-700
-    hover:cursor-pointer
+    @apply absolute right-3 top-1/2 transform -translate-y-1/3 w-4 h-4 text-shadow-gray-700;
+  }
+
+  .form-credentials-field-show-or-hide-password-icon:hover {
+    @apply cursor-pointer;
+  }
+
+  .remember-me-checkbox-div {
+    @apply flex items-center justify-end pr-2 pt-1.5 md:pt-2;
+  }
+
+  .remember-me-checkbox-input:hover {
+    @apply cursor-pointer;
+  }
+
+  .remember-me-checkbox-label {
+    @apply text-xs md:text-base ml-1;
+  }
+
+  .remember-me-checkbox-label:hover {
+    @apply cursor-pointer;
+  }
+
+  .login-register-button-div {
+    @apply mt-2 lg:mt-6 flex items-center justify-end;
   }
 
   .login-credentials-submit-button {
-    @apply
-    rounded-md
-    bg-blue-500
-    px-6
-    py-2
-    text-sm
-    md:px-8
-    md:py-3
-    lg:px-10
-    lg:py-5
-    lg:text-base
-    text-balance
-    font-semibold
-    text-white
-    hover:cursor-pointer
-    hover:scale-105
-    focus-visible:outline-2
-    focus-visible:outline-offset-3
-    focus-visible:outline-blue-600
+    @apply rounded-md bg-blue-500 px-6 py-2 text-sm md:px-8 md:py-3 lg:px-10 lg:py-5 lg:text-base text-balance font-semibold text-white;
+  }
+
+  .login-credentials-submit-button:hover {
+    @apply cursor-pointer scale-105;
+  }
+
+  .login-credentials-submit-button:focus-visible {
+    @apply outline-2 outline-offset-3 outline-blue-600;
   }
 
   .register-button {
-    @apply
-    mr-3
-      md:mr-6
-    rounded-md
-    bg-blue-400
-    px-3.5
-    py-1.5
-    text-sm
-    md:px-6
-    md:py-2.5
-    lg:px-8
-    lg:py-4
-    lg:text-base
-    text-balance
-    font-semibold
-    text-white
-    hover:cursor-pointer
-    hover:scale-105
-    focus-visible:outline-1
-    focus-visible:outline-offset-2
-    focus-visible:outline-blue-500
+    @apply mr-3 md:mr-6 rounded-md bg-blue-400 px-3.5 py-1.5 text-sm md:px-6 md:py-2.5 lg:px-8 lg:py-4 lg:text-base text-balance
+    font-semibold text-white;
+  }
+
+  .register-button:hover {
+    @apply cursor-pointer scale-105;
+  }
+
+  .register-button:focus-visible {
+    @apply outline-1 outline-offset-2 outline-blue-500;
+  }
+
+  .forgot-password-div {
+    @apply flex justify-center lg:border-t-2 border-t-blue-400 border-solid h-full;
+  }
+
+  .forgot-password-href {
+    @apply mt-3 md:mt-6 md:mb-1 lg:mb-0 text-sm md:text-base lg:text-lg;
+  }
+
+
+  /* ### Navigation bar styles ### */
+  .navigation-bar-section {
+    @apply mx-30 my-3 flex flex-row space-x-4 justify-between items-center;
+  }
+
+  .favicon-title-message-div {
+    @apply flex flex-row justify-center items-center;
+  }
+
+  .favicon {
+    @apply pr-2;
+  }
+
+  .favicon:hover {
+    @apply cursor-pointer scale-105;
+  }
+
+  .navbar-title-p {
+    @apply pr-2 font-semibold;
+  }
+
+  .navbar-message-span {
+    @apply max-w-[14svw] 2xl:max-w-[8svw];
+  }
+
+  .navbar-message-p {
+    @apply xl:text-xs/3 font-light text-ellipsis pl-2 border-l-2 border-l-black;
+  }
+
+  .navigation-bar-div {
+    @apply h-[7svh] 2xl:h-[5svh] 2xl:max-h-[5svh] p-2 flex flex-row justify-center items-center rounded-xl border-2 border-blue-500/60 text-base font-semibold 2xl:gap-4;
+  }
+
+  .navigation-bar-div:hover {
+    @apply cursor-pointer;
+  }
+
+  .button-name-span {
+    @apply relative z-10;
+  }
+
+  .button-outer-span {
+    @apply absolute inset-0 overflow-hidden rounded-md;
+  }
+
+  .button-inner-span {
+    @apply absolute left-0 aspect-square w-full origin-center translate-x-full rounded-full transition-all duration-500 group-hover:translate-x-0 group-hover:scale-150;
+  }
+
+  .light-blue-bg {
+    @apply bg-blue-100;
+  }
+
+  .medium-blue-bg {
+    @apply bg-blue-400;
+  }
+
+  .login-signup-section {
+    @apply flex flex-row gap-1 border-2
+  }
+
+  .navigation-bar-animated-buttons {
+    @apply relative z-0 h-[6svh] 2xl:h-[4svh] overflow-hidden rounded-md px-4 2xl:py-2;
+  }
+
+  .buttons-blue-bg {
+    @apply bg-blue-500 text-neutral-50;
+  }
+
+  .buttons-no-bg {
+    @apply text-blue-500;
+  }
+
+  .navigation-bar-animated-buttons:hover {
+    @apply cursor-pointer;
   }
 }
