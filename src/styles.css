@@ -94,15 +94,15 @@
 
   /* ### Navigation bar styles ### */
   .navigation-bar-section {
-    @apply mx-30 my-3 flex flex-row space-x-4 justify-between items-center;
+    @apply mx-0 sm:mx-30 my-3 flex flex-row space-x-1 justify-center sm:justify-between items-center;
   }
 
   .favicon-title-message-div {
-    @apply flex flex-row justify-center items-center;
+    @apply hidden sm:flex sm:flex-row sm:justify-center sm:items-center;
   }
 
   .favicon {
-    @apply pr-2;
+    @apply scale-100 sm:pr-2;
   }
 
   .favicon:hover {
@@ -110,27 +110,23 @@
   }
 
   .navbar-title-p {
-    @apply pr-2 font-semibold;
+    @apply hidden sm:inline-block text-xs sm:text-base pr-2 font-semibold;
   }
 
   .navbar-message-span {
-    @apply max-w-[14svw] 2xl:max-w-[8svw];
+    @apply hidden sm:inline-block max-w-[14svw] 2xl:max-w-[8svw];
   }
 
   .navbar-message-p {
-    @apply xl:text-xs/3 font-light text-ellipsis pl-2 border-l-2 border-l-black;
+    @apply hidden sm:block xl:text-xs/3 font-light text-ellipsis pl-2 border-l-2 border-l-black;
   }
 
   .navigation-bar-div {
-    @apply h-[7svh] 2xl:h-[5svh] 2xl:max-h-[5svh] p-2 flex flex-row justify-center items-center rounded-xl border-2 border-blue-500/60 text-base font-semibold 2xl:gap-4;
-  }
-
-  .navigation-bar-div:hover {
-    @apply cursor-pointer;
+    @apply sm:h-[7svh] 2xl:h-[5svh] 2xl:max-h-[5svh] p-0.5 sm:p-2 flex flex-row justify-center items-center rounded-xl border-2 border-blue-500/60 text-base font-semibold 2xl:gap-4;
   }
 
   .button-name-span {
-    @apply relative z-10;
+    @apply text-xs sm:text-base relative z-10;
   }
 
   .button-outer-span {
@@ -149,12 +145,8 @@
     @apply bg-blue-400;
   }
 
-  .login-signup-section {
-    @apply flex flex-row gap-1 border-2
-  }
-
   .navigation-bar-animated-buttons {
-    @apply relative z-0 h-[6svh] 2xl:h-[4svh] overflow-hidden rounded-md px-4 2xl:py-2;
+    @apply relative z-0 h-[6svh] 2xl:h-[4svh] overflow-hidden rounded-md px-1 sm:px-4 2xl:py-2;
   }
 
   .buttons-blue-bg {

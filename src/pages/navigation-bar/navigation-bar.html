@@ -7,7 +7,7 @@
          draggable="false"
          alt="cracken-crm-logo"/>
 
-    <div class="navigation-bar-div hover:cursor-pointer">
+    <div class=" hidden sm:flex sm:flex-row navigation-bar-div hover:cursor-pointer">
 
       <p class="navbar-title-p">Cracken CRM</p>
       <span class="navbar-message-span">
@@ -34,10 +34,10 @@
     }
   </div>
 
-  <div class="navigation-bar-div gap-2">
+  <div class="navigation-bar-div gap-0.5 sm:gap-2">
 
     <button class="group navigation-bar-animated-buttons buttons-no-bg" (click)="navigateToPage('login')">
-      <span class="button-name-span">Log In</span>
+      <span class="button-name-span text-">Log In</span>
       <span class="button-outer-span">
         <span
           class="button-inner-span light-blue-bg">
